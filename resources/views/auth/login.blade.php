@@ -29,26 +29,26 @@
                 <input id="remember_me" type="checkbox"
                     class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800"
                     name="remember">
-                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
+                <span class="ms-2 text-sm dark:text-gray-400 text-gray-300">{{ __('Remember me') }}</span>
             </label>
         </div>
 
 
         <div class="flex items-center justify-end mt-4 flex-col">
 
-            <x-boton-inicio class="">
+            <x-boton-inicio class="hover:from-red-500 hover:to-blue-500">
                 Iniciar sesión
             </x-boton-inicio>
 
             @if (Route::has('password.request'))
-                <a class="mt-2 underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+                <a class="text-gray-300 mt-2 underline text-sm dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
                     href="{{ route('password.request') }}">
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
 
-            <a href="{{ route('register') }}"
-                class="mt-4 underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+            <a href="{{ route('register') }}"300
+                class="text-gray-300 mt-4 underline text-sm dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
                 href="{{ route('password.request') }}">
                 {{ __('¿No tienes cuenta?') }}
             </a>
