@@ -2,9 +2,10 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\profileimage;
+use App\Http\Controllers\ProfileImageController; // Cambiado de 'profileimage' a 'ProfileImageController'
+use App\Http\Controllers\ImageUploadController;
 
-Route::post('/upload-profile-image', [profileimage::class, 'imageUploadProfile']);
+Route::post('image-upload', [ProfileImageController::class, 'imageUploadProfile']);
 
 Route::get('/', function () {
     return view('auth.login');

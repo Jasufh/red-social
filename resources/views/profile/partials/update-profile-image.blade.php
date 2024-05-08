@@ -10,7 +10,7 @@
         </p>
     </header>
     <div class="flex items-center gap-4">
-        <form action="/upload-profile-image" method="POST" enctype="multipart/form-data">
+        <form action="/image-upload" method="POST" enctype="multipart/form-data">
             @csrf
             <input type="file" name="image">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
